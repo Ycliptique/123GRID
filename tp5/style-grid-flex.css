@@ -1,0 +1,11 @@
+.grid-column {
+outline: 3px dotted;
+display:inline;
+width:33%;
+padding:1.5em;
+}
+
+.grid {
+display:flex;
+}
+

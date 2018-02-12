@@ -1,0 +1,13 @@
+.grid {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    
+}
+
+.grid-column {
+outline: 3px dotted;
+padding:1.5em;
+}
+
+
