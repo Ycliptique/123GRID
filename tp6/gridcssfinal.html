@@ -1,0 +1,123 @@
+
+<!dotcype html>
+<html>
+    <head>
+          <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width", scale="1">
+  <title>css grid corentin</title>
+    <style>
+    
+
+.wrapper {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas: "head head head"
+                       "nav  main special"
+                       "nav  commentaire commentaire"
+                      "foot foot foot";
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-columns: 180px 1fr;
+    
+      text-align:center;
+  font-size:2em;
+  font-family:Verdana;
+}
+
+.wrapper > header {
+  grid-area: head;
+  background-color: #54BAD8;
+}
+
+.wrapper > nav {
+  grid-area: nav;
+  background-color: #AEDBD1;
+}
+
+.wrapper > main {
+    color:whitesmoke;
+  grid-area: main;
+  background-color: #192C47;
+}
+
+.wrapper > footer {
+  grid-area: foot;
+  background-color: #F7DC1B;
+}
+.wrapper > .special {
+  grid-area: special;
+  background-color: #0093C6;
+}
+    
+.wrapper > .commentaire {
+  grid-area: commentaire;
+  background-color: #C6DCFF;
+}
+
+    @media screen and (max-width: 640px)
+{
+   .wrapper
+    {
+  grid-template-areas: "head head head"
+                       "nav  nav nav"
+                       "main  main main"
+                       "special special special"
+                       "commentaire commentaire commentaire"
+                       "foot foot foot";
+          grid-template-rows: 10% 10% 50% 5% 20% 5%;
+    }
+}    
+    
+        @media screen and (min-width: 640px) and (max-width: 768px)
+{
+   .wrapper
+    {
+  grid-template-areas: "head head head"
+                       "nav  nav nav"
+                       "main  main special"
+                       "commentaire commentaire commentaire"
+                       "foot foot foot";
+          grid-template-rows: 10% 10% 60% 15% 5%;
+    }
+}    
+    
+       @media screen and (min-width: 768px) and (max-width: 1024px)
+{
+   .wrapper
+    {
+  grid-template-areas: "nav head head"
+                       "main  main special"
+                       "commentaire commentaire commentaire"
+                       "foot foot foot";
+          grid-template-rows: 20% 60% 15% 5%;
+        grid-template-columns:30%;
+    }
+}      
+    
+           @media screen and (min-width: 1024px) and (max-width: 1280px)
+{
+   .wrapper
+    {
+  grid-template-areas: "nav head head"
+                       "main  main main"
+                       "commentaire commentaire special"
+                       "foot foot foot";
+          grid-template-rows: 15% 60% 20% 5%;
+                grid-template-columns:30%;
+    }
+}    
+</style>
+    </head>
+    <body>
+<div class="wrapper">
+  <header>En-tete</header>
+  <nav>Navigation</nav>
+  <main>Zone principale</main>
+  <div class="special">Special</div>
+  <div class="commentaire">Comm</div>
+  <footer>Pied de page</footer>
+</div>
+        </body>
+    </html>
+
+
